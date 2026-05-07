@@ -15,9 +15,5 @@ public class CajaMovement : MonoBehaviour
     void Update()
     {
         transform.Translate(0, -VelocidadCaja * Time.deltaTime, 0);
-        if (transform.position.y <= -1)
-        {
-            transform.Translate(0, 9, 0);
-        }
     }
 }
