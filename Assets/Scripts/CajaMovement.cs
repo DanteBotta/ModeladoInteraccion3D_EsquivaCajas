@@ -5,7 +5,7 @@ using UnityEngine;
 public class CajaMovement : MonoBehaviour
 {
     public float VelocidadCaja = 5f;
-    public float AumentoVelocidadCaja = 0.1f;
+    public float AumentoVelocidadCaja = 0.01f;
 
     float initialYValue;
 
@@ -17,7 +17,6 @@ public class CajaMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VelocidadCaja += AumentoVelocidadCaja;
         transform.Translate(0, -VelocidadCaja * Time.deltaTime, 0);
     }
 
@@ -39,5 +38,6 @@ public class CajaMovement : MonoBehaviour
         
         newPosition.y = initialYValue;
         transform.position = newPosition;
+        VelocidadCaja += AumentoVelocidadCaja;
     }
 }
